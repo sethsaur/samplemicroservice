@@ -17,9 +17,15 @@ zuul:
     socket-timeout-millis: 20000
 
   routes:
-    account-service:
-        path: /hello/**
-        serviceId: hello-service
+    scenario-service:
+        path: /api/scenario/**
+        serviceId: scenario-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    program-service:
+        path: /api/program/**
+        serviceId: program-service
         stripPrefix: false
         sensitiveHeaders:
 
